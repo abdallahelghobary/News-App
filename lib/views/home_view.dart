@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:news_app/views/new_list_view.dart';
 import 'package:news_app/widget/categorys_list_view.dart';
 
 class HomeView extends StatelessWidget {
@@ -6,7 +7,6 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       appBar: AppBar(
         centerTitle: true,
         backgroundColor: Colors.transparent,
@@ -14,21 +14,37 @@ class HomeView extends StatelessWidget {
         title: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const
-            Text('News ',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),),
-            Text('Cloud',style: TextStyle(color: Colors.orange,fontWeight: FontWeight.bold),),
-
+            const Text(
+              'News ',
+              style: TextStyle(
+                color: Colors.black,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            Text(
+              'Cloud',
+              style: TextStyle(
+                color: Colors.orange,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
           ],
         ),
       ),
 
-      body:
-       CategorysListView(),
-
-
-
-       ); 
+      body:  
+           Padding(
+            padding: EdgeInsets.symmetric(horizontal: 14),
+             child: ListView(
+                       children:
+             [
+                      CategorysListView(),
+                      const SizedBox(height: 20,),
+                       NewsListView(),
+             ]
+                ),
+           ),
+    );
   }
 }
-
 
