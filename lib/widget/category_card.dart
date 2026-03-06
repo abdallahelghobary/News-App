@@ -1,31 +1,28 @@
 import 'package:flutter/material.dart';
+import 'package:news_app/models/category_model.dart';
 
 class CategoryCard extends StatelessWidget {
-  const CategoryCard({super.key,required this.image});
+  const CategoryCard({super.key,required this.category});
 
-  final String image;
-
+  final CategoryModel category;
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsetsGeometry.only(right: 16),
+      padding: EdgeInsets.only(right: 16),
       child: Container(
         height: 95,
         width: 190,
         decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage(image),
-            fit: BoxFit.fill,
-          ),
+          image: DecorationImage(image: AssetImage(category.imageAssetUrl), fit: BoxFit.fill),
           borderRadius: BorderRadius.circular(10),
         ),
         child: Center(
           child: Text(
-            'Sports',
+            category.categoryName,
             style: TextStyle(
               color: Colors.white,
               fontWeight: FontWeight.bold,
-              fontSize: 17,
+              fontSize: 18,
             ),
           ),
         ),
