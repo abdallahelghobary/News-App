@@ -7,7 +7,8 @@ class NewsListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SliverList(
-      delegate: SliverChildBuilderDelegate(childCount: 10,
+      delegate: SliverChildBuilderDelegate(
+        childCount: 10,
        (context, index) 
       {
         return Padding(

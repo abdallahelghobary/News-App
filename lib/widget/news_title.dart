@@ -12,8 +12,9 @@ class NewsTitle extends StatelessWidget {
             child:
               Image.network(
                // 'https://english.ahram.org.eg/Media/News/2023/1/24/41_2023-638101895357368950-736.jpg'
-               'https://www.safha1.com/UploadCache/libfiles/1/9/800x450o/926.jpg',
-               // 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBcSd2a7YgEBjD2BGt7yhvFOwtwv_kBamVIw&s'
+             //  'https://www.safha1.com/UploadCache/libfiles/1/9/800x450o/926.jpg',
+               // 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBcSd2a7YgEBjD2BGt7yhvFOwtwv_kBamVIw&s',
+                'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEYjkBS-bUgcN4HkApCTvS2mLZ2ATCSgr4eg&s',
               fit: BoxFit.fill,
               height: 200,
               width: double.infinity,
