@@ -13,49 +13,38 @@ class NewsListView extends StatefulWidget {
 class _NewsListViewState extends State<NewsListView> {
   List<ArticleModel> articles = [];
 
+  bool isLoading = true;
+
   @override
   void initState() {
     getGeneralNews();
-
     super.initState();
   }
 
   Future<void> getGeneralNews() async {
     articles = await NewsService(Dio()).getNews();
-
-    setState(() 
-    {
-         
-    }
-    );
-  }
-
-  @override
-  void dispose() {
-    super.dispose();
+    isLoading = false;
+    setState(() {});
   }
 
   @override
   Widget build(BuildContext context) {
-    return SliverList(
-      delegate: SliverChildBuilderDelegate(childCount: articles.length, (
-        context,
-        index,
-      ) {
-        return Padding(
-          padding: EdgeInsets.only(top: 20),
-          child: NewsTitle(articleModel: articles[index]),
-        );
-      }),
-    );
-
-    //ListView.builder(
-    //     physics :BouncingScrollPhysics(),
-    //    shrinkWrap: true,
-    //   itemCount: 10,
-    //   itemBuilder: (context, index) {
-    //     return NewsTitle();
-    //   },
-    // );
+    return isLoading
+        ? const SliverToBoxAdapter(
+            child: Center(
+              child: CircularProgressIndicator(),
+            ),
+          )
+        : SliverList(
+            delegate: SliverChildBuilderDelegate(
+              (context, index) {
+                return Padding(
+                  padding: const EdgeInsets.only(top: 22),
+                  child: NewsTitle(articleModel: articles[index]),
+                );
+              },
+              childCount: articles.length,
+            ),
+          );
   }
 }

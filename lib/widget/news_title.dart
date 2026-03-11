@@ -41,9 +41,9 @@ class NewsTitle extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 8),
-         Text( articleModel.description,
-         // 'كشف مرتضي منصور رئيس مجلس اداره نادي الزمالك اعتذار البرتغالي جوزفالدو فيريرا عن عدم تدريب الفريق في الوقت الحالي وأهالي عزبه حتاته وضواحيها الكرام يرفضون ويطالبون باستقرار الفريق والحفاظ علي فيريرا ',
-          maxLines: 4,
+         Text( articleModel.description??
+          'كشف مرتضي منصور رئيس مجلس اداره نادي الزمالك اعتذار البرتغالي جوزفالدو فيريرا عن عدم تدريب الفريق في الوقت الحالي وأهالي عزبه حتاته وضواحيها الكرام يرفضون ويطالبون باستقرار الفريق والحفاظ علي فيريرا ',
+          maxLines: 3,
           overflow: TextOverflow.ellipsis,
           style: TextStyle(color: Color(0xFF757575), fontSize: 15),
         ),

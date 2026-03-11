@@ -21,8 +21,8 @@ class HomeView extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            Text(
-              'Cloud',
+            const Text(
+              'ُElGhobary',
               style: TextStyle(
                 color: Colors.orange,
                 fontWeight: FontWeight.bold,
@@ -33,15 +33,14 @@ class HomeView extends StatelessWidget {
       ),
 
       body:  
-           Padding(
+           const Padding(
             padding: EdgeInsets.symmetric(horizontal: 14),
              child: 
              CustomScrollView(
-
               slivers: [
                   SliverToBoxAdapter(child: CategorysListView()),
 
-                  SliverToBoxAdapter(child: const SizedBox(height: 20,),
+                  SliverToBoxAdapter(child: SizedBox(height: 20,),
                   ),
 
                  NewsListView()
@@ -63,4 +62,3 @@ class HomeView extends StatelessWidget {
     );
   }
 }
-
