@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:news_app/widget/new_list_view.dart';
-import 'package:news_app/widget/categorys_list_view.dart';
+import 'package:news_app/widget/add_note_bottom_sheet.dart';
+import 'package:news_app/widget/news_view.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -32,33 +32,19 @@ class HomeView extends StatelessWidget {
         ),
       ),
 
-      body:  
-           const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 14),
-             child: 
-             CustomScrollView(
-              slivers: [
-                  SliverToBoxAdapter(child: CategorysListView()),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          showModalBottomSheet(
+            context: context,
+            builder: (context) {
+              return AddNoteBottemSheet();
+            },
+          );
+        },
+        child: const Icon(Icons.add),
+      ),
 
-                  SliverToBoxAdapter(child: SizedBox(height: 20,),
-                  ),
-
-                 NewsListView()
-              //  SliverToBoxAdapter (child: NewsListView()),
-
-              ],
-             )
-             
-            //  ListView(
-            //  children:
-            //  [
-            //           CategorysListView(),
-            //           const SizedBox(height: 20,),
-            //            NewsListView(),
-            //  ]
-            //     ),
-
-           ),
+      body: NewsView(),
     );
   }
 }
