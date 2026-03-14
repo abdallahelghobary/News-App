@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:news_app/widget/add_note_bottom_sheet.dart';
-import 'package:news_app/widget/news_view.dart';
+import 'package:news_app/widget/categorys_list_view.dart';
+import 'package:news_app/widget/news_list_view_builder.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -35,6 +36,7 @@ class HomeView extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           showModalBottomSheet(
+            backgroundColor: Colors.blueGrey,
             context: context,
             builder: (context) {
               return AddNoteBottemSheet();
@@ -44,7 +46,20 @@ class HomeView extends StatelessWidget {
         child: const Icon(Icons.add),
       ),
 
-      body: NewsView(),
+      body: const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 14),
+             child: 
+             CustomScrollView(
+              slivers: [
+                  SliverToBoxAdapter(child: CategorysListView()),
+
+                  SliverToBoxAdapter(child: SizedBox(height: 20,),
+                  ), 
+
+                  NewsListViewBuilder() ,
+              ],
+    ),
+      ),
     );
   }
 }
