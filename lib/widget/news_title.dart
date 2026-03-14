@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:news_app/models/article_model.dart';
 
@@ -11,22 +12,24 @@ class NewsTitle extends StatelessWidget {
       mainAxisSize: MainAxisSize.min,
       children: [
         ClipRRect(
-          borderRadius: BorderRadius.circular(6),
-          child: Image.network(
-          articleModel.image??'https://english.ahram.org.eg/Media/News/2023/1/24/41_2023-638101895357368950-736.jpg',
-            fit: BoxFit.fill,
-            height: 200,
-            width: double.infinity,
-            errorBuilder: (context, error, stackTrace) => 
-             Image.network(
-          articleModel.image??'https://english.ahram.org.eg/Media/News/2023/1/24/41_2023-638101895357368950-736.jpg',
-            fit: BoxFit.fill,
-            height: 200,
-            width: double.infinity,
-            
-          )
-        )
-        ),
+  borderRadius: BorderRadius.circular(6),
+  child: CachedNetworkImage(
+    imageUrl: articleModel.image ??
+        'https://english.ahram.org.eg/Media/News/2023/1/24/41_2023-638101895357368950-736.jpg',
+    height: 200,
+    width: double.infinity,
+    fit: BoxFit.cover,
+
+    placeholder: (context, url) => const Center(
+      child: CircularProgressIndicator(),
+    ),
+
+    errorWidget: (context, url, error) => Image.network(
+      "https://english.ahram.org.eg/Media/News/2023/1/24/41_2023-638101895357368950-736.jpg",
+      fit: BoxFit.cover,
+    ),
+  ),
+),
   
         const SizedBox(height: 12),
          Text( articleModel.title,
