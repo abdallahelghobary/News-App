@@ -6,12 +6,11 @@ import 'package:news_app/widget/new_list_view.dart';
 
 class NewsListViewBuilder extends StatefulWidget {
   const NewsListViewBuilder({super.key});
-  
   @override
-  State<NewsListViewBuilder> createState() => _NewsListViewBuilderState();
+  State<NewsListViewBuilder> createState() => _NewsListViewState();
 }
 
-class _NewsListViewBuilderState extends State<NewsListViewBuilder> {
+class _NewsListViewState extends State<NewsListViewBuilder> {
   List<ArticleModel> articles = [];
 
   bool isLoading = true;
@@ -28,24 +27,26 @@ class _NewsListViewBuilderState extends State<NewsListViewBuilder> {
     setState(() {});
   }
 
+
   @override
   Widget build(BuildContext context) {
+ 
     return isLoading
         ? const SliverFillRemaining(
             hasScrollBody: false,
             child: Center(child: CircularProgressIndicator()),
           )
-        :articles.isNotEmpty ? 
-          NewsListView(articles: articles)
-
+        :articles.isNotEmpty ?
+          NewsListView(articles: articles,)
         : const  SliverFillRemaining(
           hasScrollBody: false,
           child: Center(child: Text('Opps Exit Problem Please Try Later ...',style: TextStyle(
              fontSize: 22,
             color: Colors.red,fontWeight: FontWeight.bold
-          ),)))
-          
-       
+          ),
+          ),
+          ),
+          )
          ;
   }
 }

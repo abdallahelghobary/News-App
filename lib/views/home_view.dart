@@ -16,14 +16,14 @@ class HomeView extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const Text(
-              'News ',
+              'News',
               style: TextStyle(
                 color: Colors.black,
                 fontWeight: FontWeight.bold,
               ),
             ),
             const Text(
-              'ُElGhobary',
+              'ُCloud',
               style: TextStyle(
                 color: Colors.orange,
                 fontWeight: FontWeight.bold,
@@ -56,7 +56,7 @@ class HomeView extends StatelessWidget {
                   SliverToBoxAdapter(child: SizedBox(height: 20,),
                   ), 
 
-                  NewsListViewBuilder() ,
+                  NewsListViewBuilder()
               ],
     ),
       ),
