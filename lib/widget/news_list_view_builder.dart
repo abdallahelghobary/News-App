@@ -2,51 +2,36 @@ import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:news_app/models/article_model.dart';
 import 'package:news_app/services/news_service.dart';
+import 'package:news_app/widget/circluarindecator.dart';
+import 'package:news_app/widget/error_message.dart';
 import 'package:news_app/widget/new_list_view.dart';
 
 class NewsListViewBuilder extends StatefulWidget {
   const NewsListViewBuilder({super.key});
+
   @override
-  State<NewsListViewBuilder> createState() => _NewsListViewState();
+  State<NewsListViewBuilder> createState() => _NewsListViewBuilderState();
 }
 
-class _NewsListViewState extends State<NewsListViewBuilder> {
-  List<ArticleModel> articles = [];
-
-  bool isLoading = true;
-
+class _NewsListViewBuilderState extends State<NewsListViewBuilder> {
+  var future;
   @override
   void initState() {
-    getGeneralNews();
     super.initState();
+   future  = NewsService(Dio()).getNews();
   }
 
-  Future<void> getGeneralNews() async {
-    articles = await NewsService(Dio()).getNews();
-    isLoading = false;
-    setState(() {});
-  }
-
-
-  @override
   Widget build(BuildContext context) {
- 
-    return isLoading
-        ? const SliverFillRemaining(
-            hasScrollBody: false,
-            child: Center(child: CircularProgressIndicator()),
-          )
-        :articles.isNotEmpty ?
-          NewsListView(articles: articles,)
-        : const  SliverFillRemaining(
-          hasScrollBody: false,
-          child: Center(child: Text('Opps Exit Problem Please Try Later ...',style: TextStyle(
-             fontSize: 22,
-            color: Colors.red,fontWeight: FontWeight.bold
-          ),
-          ),
-          ),
-          )
-         ;
+    return FutureBuilder<List<ArticleModel>>(
+      future: future,
+      builder: (context, snapshot) {
+        if (snapshot.hasData) {
+          return NewsListView(articles: snapshot.data!);
+        } else if (snapshot.hasError) {
+          return const SliverToBoxAdapter(child: Center(child: ErrorMassage()));
+        }
+        return CircularIndecator();
+      },
+    );
   }
 }

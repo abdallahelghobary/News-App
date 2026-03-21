@@ -49,3 +49,32 @@
 //           );
 //   }
 // }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // isLoading
+    //       ? const SliverFillRemaining(
+    //           hasScrollBody: false,
+    //           child: Center(child: CircularProgressIndicator()),
+    //         )
+    //       :articles.isNotEmpty ?
+    //         NewsListView(articles: articles,)
+    //       : const  SliverFillRemaining(
+    //         hasScrollBody: false,
+    //         child: Center(child: Text('Opps Exit Problem Please Try Later ...',style: TextStyle(
+    //            fontSize: 22,
+    //           color: Colors.red,fontWeight: FontWeight.bold
+    //         ),
+    //         ),
+    //         ),
+    //         );
