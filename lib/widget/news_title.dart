@@ -15,17 +15,20 @@ class NewsTitle extends StatelessWidget {
   borderRadius: BorderRadius.circular(6),
   child: CachedNetworkImage(
     imageUrl: articleModel.image ??
-        'https://english.ahram.org.eg/Media/News/2023/1/24/41_2023-638101895357368950-736.jpg',
+       // 'https://english.ahram.org.eg/Media/News/2023/1/24/41_2023-638101895357368950-736.jpg',
+       'https://st5.depositphotos.com/12659858/71031/i/450/depositphotos_710315008-stock-photo-rendering-error-404-text-screen.jpg',
     height: 200,
     width: double.infinity,
     fit: BoxFit.cover,
 
     placeholder: (context, url) => const Center(
-      child: CircularProgressIndicator(),
+      child: CircularProgressIndicator(color: Colors.orange,),
     ),
 
     errorWidget: (context, url, error) => Image.network(
-      "https://english.ahram.org.eg/Media/News/2023/1/24/41_2023-638101895357368950-736.jpg",
+    //  "https://english.ahram.org.eg/Media/News/2023/1/24/41_2023-638101895357368950-736.jpg",
+       'https://st5.depositphotos.com/12659858/71031/i/450/depositphotos_710315008-stock-photo-rendering-error-404-text-screen.jpg',
+
       fit: BoxFit.cover,
     ),
   ),

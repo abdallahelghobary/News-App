@@ -10,7 +10,7 @@ class CircularIndecator extends StatelessWidget {
   Widget build(BuildContext context) {
     return const SliverFillRemaining(
       hasScrollBody: false,
-      child: Center(child: CircularProgressIndicator()),
+      child: Center(child: CircularProgressIndicator(color: Colors.orange,)),
     );
   }
 }

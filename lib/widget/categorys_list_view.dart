@@ -15,9 +15,7 @@ class CategorysListView extends StatelessWidget {
     CategoryModel(imageAssetUrl: 'assets/health.jpg', categoryName: 'Health'),
    CategoryModel(imageAssetUrl: 'assets/general.jpg', categoryName: 'General'),
    
-
   ];
-
   @override
   Widget build(BuildContext context) {
     return SizedBox(
