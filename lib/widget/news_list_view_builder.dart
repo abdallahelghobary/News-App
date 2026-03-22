@@ -18,19 +18,28 @@ class _NewsListViewBuilderState extends State<NewsListViewBuilder> {
   @override
   void initState() {
     super.initState();
-   future  = NewsService(Dio()).getNews();
+    future = NewsService(Dio()).getTopHeadlines(category: 'general');
   }
 
   Widget build(BuildContext context) {
     return FutureBuilder<List<ArticleModel>>(
       future: future,
       builder: (context, snapshot) {
-        if (snapshot.hasData) {
-          return NewsListView(articles: snapshot.data!);
+        if (snapshot.connectionState == ConnectionState.waiting) {
+          return const CircularIndecator();
         } else if (snapshot.hasError) {
-          return const SliverToBoxAdapter(child: Center(child: ErrorMassage()));
+          return const SliverFillRemaining(
+            hasScrollBody: false,
+            child: Center(child: ErrorMassage()),
+          );
+        } else if (snapshot.hasData && snapshot.data!.isNotEmpty) {
+          return NewsListView(articles: snapshot.data!);
+        } else {
+          return const SliverFillRemaining(
+            hasScrollBody: false,
+            child: Center(child: ErrorMassage()),
+          );
         }
-        return CircularIndecator();
       },
     );
   }
