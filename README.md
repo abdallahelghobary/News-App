@@ -1,16 +1,100 @@
-# news_app
 
-A new Flutter project.
+# 📰 Elghobary News App
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+A modern **News Application** built with Flutter that delivers the latest headlines with a clean UI and smooth user experience.
 
-A few resources to get you started if this is your first Flutter project:
+---
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## 🚀 Features
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+* 📡 Fetch latest news from API
+* 🔄 Auto reload when internet is restored
+* ❌ Smart error handling with retry
+* ⚡ Smooth loading experience
+* 📶 Internet connectivity detection
+* 🗂 Category-based browsing
+
+---
+
+## 📱 App Preview
+
+<p align="center">
+  <img src="assets/screenshots/splash.png" width="250"/>
+</p>
+
+---
+
+## 🏗️ Architecture
+
+Clean and scalable structure:
+
+```
+lib/
+│
+├── models/
+├── services/
+├── controllers/
+├── views/
+└── widgets/
+```
+
+---
+
+## 🧰 Tech Stack
+
+* Flutter
+* Dart
+* Dio
+* Connectivity Plus
+
+---
+
+## ⚙️ Setup
+
+---
+
+## 🔑 API Setup
+
+Add your API key in:
+
+```
+lib/services/news_service.dart
+```
+
+---
+
+## 💡 Future Improvements
+
+* 💾 Offline cache (Hive)
+* 🔍 Search feature
+* 🌙 Dark mode
+* 📄 Pagination
+* ✨ Shimmer loading
+
+---
+
+## 👨‍💻 Author
+
+**Abdallah Ahmed**
+
+---
+<img width="1080" height="2424" alt="Screenshot_1774193641" src="https://github.com/user-attachments/assets/d584f299-0dcd-4ff6-9c77-921f76123f3d" />
+
+
+## ⭐ Support
+
+Give this repo a ⭐ if you like it!
+
+
+
+
+
+
+
+
+
+
+
+
+
