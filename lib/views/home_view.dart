@@ -33,18 +33,6 @@ class HomeView extends StatelessWidget {
         ),
       ),
 
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          showModalBottomSheet(
-            backgroundColor: Colors.blueGrey,
-            context: context,
-            builder: (context) {
-              return AddNoteBottemSheet();
-            },
-          );
-        },
-        child: const Icon(Icons.add),
-      ),
 
       body: const Padding(
         padding: EdgeInsets.symmetric(horizontal: 14),

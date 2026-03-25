@@ -36,7 +36,7 @@ class NewsTitle extends StatelessWidget {
   
         const SizedBox(height: 12),
          Text( articleModel.title,
-          
+         
         //  'مرتضي منصور : فيريرا اعتذر عن تدريب الزمالك ومدربان نفاضل بينهما وأهالي عزبه حتاته يرفضون هذا القرار   Filgool.com',
           maxLines: 3,
           overflow: TextOverflow.ellipsis,
