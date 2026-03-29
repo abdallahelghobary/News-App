@@ -12,6 +12,7 @@ class CategoryView extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.white12
       ),
+      
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 12),
         child: CustomScrollView(
