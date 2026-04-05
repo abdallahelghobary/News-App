@@ -10,7 +10,9 @@ class CategoryView extends StatelessWidget {
     
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.white12
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        title: Text(category.toUpperCase()) 
       ),
       
       body: Padding(
