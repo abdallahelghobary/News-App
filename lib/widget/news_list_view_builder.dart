@@ -2,9 +2,9 @@ import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:news_app/models/article_model.dart';
 import 'package:news_app/services/news_service.dart';
-import 'package:news_app/widget/circluarindecator.dart';
 import 'package:news_app/widget/error_message.dart';
 import 'package:news_app/widget/new_list_view.dart';
+import 'package:news_app/widget/news_list_skeleton.dart';
 
 class NewsListViewBuilder extends StatefulWidget {
   const NewsListViewBuilder({super.key, required this.category});
@@ -26,7 +26,7 @@ class _NewsListViewBuilderState extends State<NewsListViewBuilder> {
       future: future,
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.waiting) {
-          return const CircularIndecator();
+          return const NewsListSkeleton();
         } else if (snapshot.hasError) {
           return const SliverFillRemaining(
             hasScrollBody: false,

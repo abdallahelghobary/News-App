@@ -24,14 +24,14 @@ class _SplashViewState extends State<SplashView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor:Color(0xfff9f9f9),
+      backgroundColor: Colors.white,   
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Image.asset(
               //'assets/icon/Elghobary News Logo - Globe and AlertStripeDesign.png',
-              'assets/icon/elghobary_logo.png',
+              'assets/icon/elghobary_logo.jpg',
               height: 200,
               width: 200,
               errorBuilder: (context, error, stackTrace) {

@@ -4,3 +4,4 @@ class CategoryModel {
 
  const CategoryModel({required this.imageAssetUrl,required this.categoryName});
 }
+
