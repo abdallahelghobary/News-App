@@ -82,42 +82,19 @@ lib/services/news_service.dart
 ## 📱 Screenshots
 ## 📱 Screenshots
 
-<table align="center">
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/d584f299-0dcd-4ff6-9c77-921f76123f3d" width="220"/>
+  <img src="https://github.com/user-attachments/assets/759c131c-c374-4b9d-b5b8-e292580017d2" width="220"/>
+</p>
 
-  <tr>
-    <td align="center">
-      <b>Splash Screen</b><br/>
-      <img src="https://github.com/user-attachments/assets/d584f299-0dcd-4ff6-9c77-921f76123f3d" width="200"/>
-    </td>
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/35c95e86-869f-4301-a49d-c919923779e1" width="220"/>
+  <img src="https://github.com/user-attachments/assets/5fad4a37-5b89-4618-bcb8-30786652d7d8" width="220"/>
+</p>
 
-    <td align="center">
-      <b>Skeleton Loading</b><br/>
-      <img src="https://github.com/user-attachments/assets/759c131c-c374-4b9d-b5b8-e292580017d2" width="200"/>
-    </td>
-
-    <td align="center">
-      <b>Home News</b><br/>
-      <img src="https://github.com/user-attachments/assets/35c95e86-869f-4301-a49d-c919923779e1" width="200"/>
-    </td>
-  </tr>
-
-  <tr>
-    <td align="center">
-      <b>Technology News</b><br/>
-      <img src="https://github.com/user-attachments/assets/5fad4a37-5b89-4618-bcb8-30786652d7d8" width="200"/>
-    </td>
-
-    <td align="center">
-      <b>Web View</b><br/>
-      <img src="https://github.com/user-attachments/assets/8e91d4f7-8e4c-4a7c-929b-f4520128f876" width="200"/>
-    </td>
-
-    <td align="center">
-      <!-- فاضية عشان يكملوا 3 في الصف -->
-    </td>
-  </tr>
-
-</table>
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/8e91d4f7-8e4c-4a7c-929b-f4520128f876" width="220"/>
+</p>
 
 
 ## ⭐ Support
