@@ -79,7 +79,15 @@ lib/services/news_service.dart
 **Abdallah Ahmed**
 
 ---
-<img width="360" height="808" alt="Screenshot_1774193641" src="https://github.com/user-attachments/assets/d584f299-0dcd-4ff6-9c77-921f76123f3d" />
+<img width="360" height="808" alt="Screenshot_1774193641" src="https://github.com/user-attachments/assets/d584f299-0dcd-4ff6-9c77-921f76123f3d" />,
+<img width="360" height="808" alt="Skelitonizer Loading" src="https://github.com/user-attachments/assets/759c131c-c374-4b9d-b5b8-e292580017d2" />,
+<img width="360" height="808" alt="Home News" src="https://github.com/user-attachments/assets/35c95e86-869f-4301-a49d-c919923779e1" />,
+<img width="360" height="808" alt="Technology News" src="https://github.com/user-attachments/assets/5fad4a37-5b89-4618-bcb8-30786652d7d8" />,
+<img width="360" height="808" alt="Web View" src="https://github.com/user-attachments/assets/8e91d4f7-8e4c-4a7c-929b-f4520128f876" />
+
+
+
+
 
 
 ## ⭐ Support
