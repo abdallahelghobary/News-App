@@ -80,8 +80,10 @@ lib/services/news_service.dart
 
 ---
 ## 📱 Screenshots
+## 📱 Screenshots
 
 <table align="center">
+
   <tr>
     <td align="center">
       <b>Splash Screen</b><br/>
@@ -109,9 +111,13 @@ lib/services/news_service.dart
       <b>Web View</b><br/>
       <img src="https://github.com/user-attachments/assets/8e91d4f7-8e4c-4a7c-929b-f4520128f876" width="200"/>
     </td>
-  </tr>
-</table>
 
+    <td align="center">
+      <!-- فاضية عشان يكملوا 3 في الصف -->
+    </td>
+  </tr>
+
+</table>
 
 
 ## ⭐ Support
