@@ -20,7 +20,7 @@ A modern **News Application** built with Flutter that delivers the latest headli
 ## 📱 App Preview
 
 <p align="center">
-  <img src="assets/screenshots/splash.png" width="250"/>
+  <img src="assets/screenshots/splash.png" width="200"/>
 </p>
 
 ---
