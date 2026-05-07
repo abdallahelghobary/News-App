@@ -79,7 +79,7 @@ lib/services/news_service.dart
 **Abdallah Ahmed**
 
 ---
-<img width="720" height="1616" alt="Screenshot_1774193641" src="https://github.com/user-attachments/assets/d584f299-0dcd-4ff6-9c77-921f76123f3d" />
+<img width="360" height="808" alt="Screenshot_1774193641" src="https://github.com/user-attachments/assets/d584f299-0dcd-4ff6-9c77-921f76123f3d" />
 
 
 ## ⭐ Support
