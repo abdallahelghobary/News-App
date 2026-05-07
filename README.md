@@ -80,7 +80,6 @@ lib/services/news_service.dart
 
 ---
 ## 📱 Screenshots
-## 📱 Screenshots
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/d584f299-0dcd-4ff6-9c77-921f76123f3d" width="220"/>
